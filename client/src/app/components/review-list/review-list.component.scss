@@ -1,0 +1,50 @@
+tr > th {
+    text-align: center !important;
+    background: goldenrod !important;
+}
+
+tr > td {
+    text-align: center !important;
+}
+
+
+::ng-deep {
+    .p-rating .p-rating-icon.pi-star-fill {
+        color: goldenrod !important;
+    }
+
+    .p-rating .p-rating-icon {
+        color: goldenrod !important;
+    }
+}
+
+.casino-column {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.features-column {
+    margin-left: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    i {
+        margin-right: 10px;
+    }
+}
+
+.play-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    button {
+        background-color: green;
+        margin-bottom: 10px;
+    }
+}
+
+

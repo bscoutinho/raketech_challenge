@@ -7,7 +7,8 @@ import {MenuItem} from 'primeng/api';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent { 
-  items!: MenuItem[];
+  
+  items: MenuItem[] = [];
 
   ngOnInit() {
     this.items = [
