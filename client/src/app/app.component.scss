@@ -1,0 +1,11 @@
+.img-navbar {
+    margin-right: 5px;
+
+    // media query to medium and small devices
+    @media screen and (max-width: 959px) {
+        display: none;
+    }
+}
+
+
+
