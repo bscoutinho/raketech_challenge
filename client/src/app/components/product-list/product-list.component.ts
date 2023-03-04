@@ -1,10 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { Product } from 'src/app/interfaces';
 import { ProductService } from 'src/app/services/productsservice';
-import { Router } from '@angular/router';
-import { Observable, startWith, throttleTime } from 'rxjs';
-import { fromEvent } from 'rxjs';
-import { map } from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-product-list',
@@ -34,6 +31,8 @@ export class ProductListComponent {
       this.products = data[575];
       console.log('Retrieving products: ', this.products);
     });
+
+    console.log(this.products);
   }
 
   //redirect to play page

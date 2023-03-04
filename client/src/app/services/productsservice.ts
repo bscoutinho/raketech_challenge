@@ -20,7 +20,7 @@ export class ProductService {
             "575": list
         }
 
-        // post data to server partially (patch)
+        // post data to server partially 
         this.http.patch(this.baseUrl, body).subscribe((data) => {
             console.log('Product list saved: ', data);
         });

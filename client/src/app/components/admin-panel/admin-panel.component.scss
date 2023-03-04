@@ -1,3 +1,13 @@
+::ng-deep {
+  .p-rating .p-rating-icon.pi-star-fill {
+    color: goldenrod !important;
+  }
+
+  .p-rating .p-rating-icon {
+    color: goldenrod !important;
+  }
+}
+
 .drag-wrapper {
   padding: 4px 0;
 }
@@ -8,20 +18,30 @@
 
 .card {
   border: 1px solid goldenrod;
-  padding: 4px;
-  height: 100px;
+  padding:10px;
   border-radius: 5px;
   margin-bottom: 10px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
   cursor: grabbing;
 
   span {
     font-size: 1.2em;
   }
+}
+
+.card-mobile {
+  border: 1px solid goldenrod;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  align-items: center;
+  cursor: grabbing;
 }
 
 button {
@@ -34,3 +54,81 @@ button {
   background: darkgreen;
   border-color:darkgreen;
 }
+
+.features-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+.features-column {
+  display: flex;
+  flex-direction: row;
+  i {
+    margin-right: 10px;
+  }
+}
+
+.casino-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    width: fit-content
+  }
+}
+
+.mobile-casino {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+
+  img {
+    max-width: 50%;
+  }
+}
+
+.mobile-bonus {
+  .bonus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+}
+
+.mobile-feature {
+  margin-bottom: 20px;
+
+  i {
+    font-size: 0.6em;
+    margin-right: 5px;
+  }
+}
+
+.mobile-play {
+  button {
+    background-color: green;
+    border-color: green;
+    margin-bottom: 10px;
+  }
+}
+
+.nodata {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  p {
+    font-size: 2em;
+    color: dimgray
+  }
+}
+
+
+

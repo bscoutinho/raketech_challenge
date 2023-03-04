@@ -15,6 +15,8 @@ import { ButtonModule } from 'primeng/button';
 import { ReviewsComponent } from './components/reviews/reviews.component';
 import { PanelModule } from 'primeng/panel';
 import { CardModule } from 'primeng/card';
+import { ToastModule } from 'primeng/toast';
+import { MessageService } from 'primeng/api';
 
 @NgModule({
   declarations: [
@@ -34,9 +36,10 @@ import { CardModule } from 'primeng/card';
     RatingModule,
     ButtonModule,
     PanelModule,
-    CardModule
+    CardModule,
+    ToastModule
   ],
-  providers: [ProductService],
+  providers: [ProductService, MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -2,20 +2,20 @@
   "toplists": {
     "575": [
       {
-        "brand_id": "12173",
-        "position": 3,
+        "brand_id": "49211",
+        "position": 1,
         "info": {
-          "rating": 5,
-          "bonus": "Free $10 + 100% deposit bonus up to $500",
+          "rating": 3,
+          "bonus": "Free $10 + 100% deposit bonus up to $600",
           "features": [
-            "Several payment methods",
-            "Free & real money games",
-            "$10 No Deposit Bonus"
+            "Several limited promos",
+            "$100 no deposit bonus",
+            "App for android & iOS"
           ]
         },
-        "terms_and_conditions": "21+ | <a href=\"https://generator.lorem-ipsum.info/terms-and-conditions\">T&CS Apply</a> | Gamble Responsibly",
+        "terms_and_conditions": "18+ | <a href=\"https://generator.lorem-ipsum.info/terms-and-conditions\">T&CS Apply</a> | Gamble Responsibly",
         "logo": "https://picsum.photos/195/75",
-        "play_url": "https://example.com/track?v=123123"
+        "play_url": "https://example.com/wow-the-perfect-casino"
       },
       {
         "brand_id": "61873",
@@ -34,22 +34,6 @@
         "play_url": "https://example.com/o3nJne039xbpqQ9fdop"
       },
       {
-        "brand_id": "49211",
-        "position": 1,
-        "info": {
-          "rating": 3,
-          "bonus": "Free $10 + 100% deposit bonus up to $600",
-          "features": [
-            "Several limited promos",
-            "$100 no deposit bonus",
-            "App for android & iOS"
-          ]
-        },
-        "terms_and_conditions": "18+ | <a href=\"https://generator.lorem-ipsum.info/terms-and-conditions\">T&CS Apply</a> | Gamble Responsibly",
-        "logo": "https://picsum.photos/195/75",
-        "play_url": "https://example.com/wow-the-perfect-casino"
-      },
-      {
         "brand_id": "14164",
         "position": 2,
         "info": {
@@ -64,6 +48,22 @@
         "terms_and_conditions": "21+ | <a href=\"https://generator.lorem-ipsum.info/terms-and-conditions\">T&CS Apply</a> | Gamble Responsibly",
         "logo": "https://picsum.photos/195/75",
         "play_url": "https://example.com/amazing-offer/2134"
+      },
+      {
+        "brand_id": "12173",
+        "position": 3,
+        "info": {
+          "rating": 5,
+          "bonus": "Free $10 + 100% deposit bonus up to $500",
+          "features": [
+            "Several payment methods",
+            "Free & real money games",
+            "$10 No Deposit Bonus"
+          ]
+        },
+        "terms_and_conditions": "21+ | <a href=\"https://generator.lorem-ipsum.info/terms-and-conditions\">T&CS Apply</a> | Gamble Responsibly",
+        "logo": "https://picsum.photos/195/75",
+        "play_url": "https://example.com/track?v=123123"
       }
     ],
     "884": [],

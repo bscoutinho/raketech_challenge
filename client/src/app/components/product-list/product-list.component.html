@@ -1,5 +1,8 @@
 <div (window:resize)="onResize($event)">
-  <p-table [value]="products" *ngIf="!mobile"  >
+  <div class="nodata" *ngIf="products.length === 0">
+    <p>No data available</p>
+  </div>
+  <p-table [value]="products" *ngIf="!mobile && products.length > 0">
     <ng-template pTemplate="header">
       <tr>
         <th>Casino</th>
@@ -8,7 +11,7 @@
         <th>Play</th>
       </tr>
     </ng-template>
-    <ng-template pTemplate="body" let-product>
+    <ng-template pTemplate="body" let-product *ngIf="products">
       <tr>
         <td>
           <div class="casino-column">
@@ -24,7 +27,7 @@
           <ng-container *ngFor="let feature of product.info.features">
             <div class="features-column">
               <i class="pi pi-circle-fill"></i>
-              <p>{{ feature }}</p>
+              <span style="margin-bottom: 5px">{{ feature }}</span>
             </div>
           </ng-container>
         </td>
@@ -40,7 +43,7 @@
     </ng-template>
   </p-table>
   
-  <p-table [value]="products" *ngIf="mobile"> 
+  <p-table [value]="products" *ngIf="mobile && products.length > 0"> 
     <ng-template pTemplate="header">
       <tr>
         <th>Casino</th>

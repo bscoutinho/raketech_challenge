@@ -1,17 +1,80 @@
-<p-panel header="Product list">
-
-  <div class="drag-wrapper" *ngFor="let row of products; let index = index" [draggable]="true"
-    [class.dragging]="index === this.draggingIndex" (dragstart)="onDragStart(index)" (dragenter)="onDragEnter(index)"
-    (dragend)="onDragEnd()">
-    <div class="card">
-      <span><b>Id:</b> {{ row.brand_id }}</span>
-      <span><b>Name:</b> {{ row.play_url }} </span>
-    </div>
+<div (window:resize)="onResize($event)">
+  <div class="nodata" *ngIf="products.length === 0">
+    <p>No data available</p>
   </div>
-</p-panel>
+  <p-panel header="Admin Panel" *ngIf="!mobile && products.length > 0">
+    <div class="drag-wrapper" *ngFor="let product of products; let index = index" [draggable]="true"
+      [class.dragging]="index === this.draggingIndex" (dragstart)="onDragStart(index)" (dragenter)="onDragEnter(index)"
+      (dragend)="onDragEnd()">
+      <div class="card">
+        <div class="casino-column">
+          <img src="{{ product.logo }}" />
+          <a routerLink="/reviews/{{ product.brand_id }}">Review</a>
+        </div>
+        <div class="bonus-column">
+          <p-rating [ngModel]="product.info.rating" [readonly]="true" [cancel]="false" class="rkt-rating"></p-rating>
+          <p>{{ product.info.bonus }}</p>
+        </div>
+        <div class="feature-colum">
+          <ng-container *ngFor="let feature of product.info.features">
+            <div class="features-column">
+              <i class="pi pi-circle-fill"></i>
+              <span>{{ feature }}</span>
+            </div>
+          </ng-container>
+        </div>
+        <div class="play-column">
+          <button pButton type="button" (click)="clickProduct(product.play_url)">
+            <span><u>PLAY NOW</u></span>
+          </button>
+          <div [innerHTML]="product.terms_and_conditions"></div>
+        </div>
+      </div>
+    </div>
+  </p-panel>
 
-<div>
-  <button pButton type="button" (click)="saveList()">
-    <span>SAVE</span>
-  </button>
+  <p-panel header="Admin Panel" *ngIf="mobile && products.length > 0">
+    <div class="drag-wrapper" *ngFor="let product of products; let index = index" [draggable]="true"
+      [class.dragging]="index === this.draggingIndex" (dragstart)="onDragStart(index)" (dragenter)="onDragEnter(index)"
+      (dragend)="onDragEnd()"> 
+      <div class="card-mobile">
+        <div class="mobile-casino">
+          <img src="{{ product.logo }}" />
+          <a routerLink="/reviews/{{ product.brand_id }}">Review</a>
+        </div>
+        <div class="mobile-bonus">
+          <p-rating [ngModel]="product.info.rating" [readonly]="true" [cancel]="false" class="rkt-rating"></p-rating>
+          <div class="bonus">
+            <span><b>Bonus:</b></span>
+            <span>{{ product.info.bonus }}</span>
+          </div>
+        </div>
+        <div class="mobile-feature">
+          <span><b>Feature:</b></span>
+          <ng-container *ngFor="let feature of product.info.features">
+            <div>
+              <i class="pi pi-circle-fill"></i>
+              <span>{{ feature }}</span>
+            </div>
+          </ng-container>
+        </div>
+        <div class="mobile-play">
+          <button pButton type="button" (click)="clickProduct(product.play_url)">
+            <span><u>PLAY NOW</u></span>
+          </button>
+          <div [innerHTML]="product.terms_and_conditions"></div>
+        </div>
+      </div>
+    </div>
+  </p-panel>
+  
+  <div *ngIf="products.length > 0">
+    <button pButton type="button" (click)="saveList()">
+      <span>SAVE</span>
+    </button>
+  </div>
 </div>
+
+<p-toast position="top-right"></p-toast>
+
+
