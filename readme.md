@@ -12,7 +12,7 @@ Client developed in Angular 15
 
 - npm install
 - npm start
-- htpps://localhost:4200
+- https://localhost:4200
 
 ### Deploy version
 Obs: Only client is deployed in production, it's necessary execute server manually
