@@ -6,17 +6,19 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { MenubarModule } from 'primeng/menubar';
 import { TableModule } from 'primeng/table';
-import { ReviewListComponent } from './components/review-list/review-list.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
 import { AdminPanelComponent } from './components/admin-panel/admin-panel.component';
 import { ProductService } from './services/productsservice';
 import { RatingModule } from 'primeng/rating';
 import { ButtonModule } from 'primeng/button';
+import { ReviewsComponent } from './components/reviews/reviews.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ReviewListComponent,
-    AdminPanelComponent
+    ProductListComponent,
+    AdminPanelComponent,
+    ReviewsComponent
   ],
   imports: [
     BrowserModule,

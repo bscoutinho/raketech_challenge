@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ReviewListComponent } from './components/review-list/review-list.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
 import { AdminPanelComponent } from './components/admin-panel/admin-panel.component';
+import { ReviewsComponent } from './components/reviews/reviews.component';
 
 // Routes configuration
 const routes: Routes = [
   { path: '', redirectTo: 'reviews', pathMatch: 'full' },
-  { path: 'reviews', component: ReviewListComponent },
+  { path: 'reviews', component: ProductListComponent },
+  { path: 'reviews/:id', component: ReviewsComponent },
   { path: 'admin', component: AdminPanelComponent },
 ];
 

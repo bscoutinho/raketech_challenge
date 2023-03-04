@@ -6,7 +6,6 @@ export class ProductService {
 
     constructor(private http: HttpClient) { }
 
-
     getData() {
         return this.http.get<any>('assets/data.json');
     }
