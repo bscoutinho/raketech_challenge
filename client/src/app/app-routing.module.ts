@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: 'reviews', component: ProductListComponent },
   { path: 'reviews/:id', component: ReviewsComponent },
   { path: 'admin', component: AdminPanelComponent },
+  {path: '**', redirectTo: 'reviews'}
 ];
 
 @NgModule({

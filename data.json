@@ -1,4 +1,5 @@
 {
+  "key": "hub_toplists_order",
   "toplists": {
     "575": [
       {
@@ -117,5 +118,8 @@
         "play_url": "https://example.com/2134"
       }
     ]
-  }
+  },
+  "autoload": true,
+  "language": "en",
+  "country": "US"
 }
