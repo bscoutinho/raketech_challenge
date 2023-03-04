@@ -1,15 +1,18 @@
 .img-navbar {
     margin-right: 5px;
-
-    // media query to medium and small devices
-    @media screen and (max-width: 959px) {
-        display: none;
-    }
 }
 
 .main-content {
     margin-top: 2vh;
 }
+
+@media screen and (max-width: 959px) {
+    p-menubar {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+}
+
 
 
 

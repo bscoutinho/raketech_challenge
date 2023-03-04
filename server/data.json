@@ -2,22 +2,6 @@
   "toplists": {
     "575": [
       {
-        "brand_id": "14164",
-        "position": 2,
-        "info": {
-          "rating": 4,
-          "bonus": "Free $25 bonus and 100% deposit up to $1000",
-          "features": [
-            "Easy cash back options",
-            "Good payment options",
-            "Exclusive games"
-          ]
-        },
-        "terms_and_conditions": "21+ | <a href=\"https://generator.lorem-ipsum.info/terms-and-conditions\">T&CS Apply</a> | Gamble Responsibly",
-        "logo": "https://picsum.photos/195/75",
-        "play_url": "https://example.com/amazing-offer/2134"
-      },
-      {
         "brand_id": "12173",
         "position": 3,
         "info": {
@@ -64,6 +48,22 @@
         "terms_and_conditions": "18+ | <a href=\"https://generator.lorem-ipsum.info/terms-and-conditions\">T&CS Apply</a> | Gamble Responsibly",
         "logo": "https://picsum.photos/195/75",
         "play_url": "https://example.com/wow-the-perfect-casino"
+      },
+      {
+        "brand_id": "14164",
+        "position": 2,
+        "info": {
+          "rating": 4,
+          "bonus": "Free $25 bonus and 100% deposit up to $1000",
+          "features": [
+            "Easy cash back options",
+            "Good payment options",
+            "Exclusive games"
+          ]
+        },
+        "terms_and_conditions": "21+ | <a href=\"https://generator.lorem-ipsum.info/terms-and-conditions\">T&CS Apply</a> | Gamble Responsibly",
+        "logo": "https://picsum.photos/195/75",
+        "play_url": "https://example.com/amazing-offer/2134"
       }
     ],
     "884": [],
