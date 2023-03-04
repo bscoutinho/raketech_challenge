@@ -1,1 +1,17 @@
-<p>admin-panel works!</p>
+<p-panel header="Product list">
+
+  <div class="drag-wrapper" *ngFor="let row of products; let index = index" [draggable]="true"
+    [class.dragging]="index === this.draggingIndex" (dragstart)="onDragStart(index)" (dragenter)="onDragEnter(index)"
+    (dragend)="onDragEnd()">
+    <div class="card">
+      <span><b>Id:</b> {{ row.brand_id }}</span>
+      <span><b>Name:</b> {{ row.play_url }} </span>
+    </div>
+  </div>
+</p-panel>
+
+<div>
+  <button pButton type="button" (click)="saveList()">
+    <span>SAVE</span>
+  </button>
+</div>

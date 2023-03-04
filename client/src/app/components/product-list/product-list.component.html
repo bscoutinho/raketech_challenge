@@ -1,40 +1,40 @@
 <p-table [value]="products">
-    <ng-template pTemplate="header">
-        <tr>
-            <th>Casino</th>
-            <th>Bonus</th>
-            <th>Features</th>
-            <th>Play</th>
-        </tr>
-    </ng-template>
-    <ng-template pTemplate="body" let-product>
-        <tr >
-            <td>
-                <div class="casino-column">
-                    <img src='{{ product.logo }}' />
-                    <a routerLink="/reviews/{{ product.brand_id }}">Review</a>
-                </div>
-            </td>
-            <td>
-                <p-rating [ngModel]="product.info.rating" [readonly]="true"  [cancel]="false" class="rkt-rating" ></p-rating>
-                <p>{{product.info.bonus}}</p>
-            </td>
-            <td>
-                <ng-container *ngFor="let feature of product.info.features">
-                        <div class="features-column">
-                            <i class="pi pi-circle-fill"></i>
-                            <p>{{ feature }}</p>
-                        </div> 
-                </ng-container>
-            </td>
-            <td>
-                <div class="play-column">
-                    <button pButton type="button" (click)="clickProduct(product.play_url)">
-                        <span><u>PLAY NOW</u></span>
-                    </button>
-                    <div [innerHTML]='product.terms_and_conditions'></div>
-                </div>
-            </td>
-        </tr>
-    </ng-template>
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Casino</th>
+      <th>Bonus</th>
+      <th>Features</th>
+      <th>Play</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-product>
+    <tr>
+      <td>
+        <div class="casino-column">
+          <img src="{{ product.logo }}" />
+          <a routerLink="/reviews/{{ product.brand_id }}">Review</a>
+        </div>
+      </td>
+      <td>
+        <p-rating [ngModel]="product.info.rating" [readonly]="true" [cancel]="false" class="rkt-rating"></p-rating>
+        <p>{{ product.info.bonus }}</p>
+      </td>
+      <td>
+        <ng-container *ngFor="let feature of product.info.features">
+          <div class="features-column">
+            <i class="pi pi-circle-fill"></i>
+            <p>{{ feature }}</p>
+          </div>
+        </ng-container>
+      </td>
+      <td>
+        <div class="play-column">
+          <button pButton type="button" (click)="clickProduct(product.play_url)">
+            <span><u>PLAY NOW</u></span>
+          </button>
+          <div [innerHTML]="product.terms_and_conditions"></div>
+        </div>
+      </td>
+    </tr>
+  </ng-template>
 </p-table>
